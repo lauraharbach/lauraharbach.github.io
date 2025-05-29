@@ -4,27 +4,104 @@ body {
   font-family: 'Segoe UI', Arial, sans-serif;
 }
 
-header, nav, footer {
+/* Card styling for main content and posts */
+.main-content, .page, .post, .archive {
+  background: rgba(255,255,255,0.92);
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08), 0 1.5px 6px rgba(0,0,0,0.04);
+  padding: 2em 2.5em;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  animation: fadeIn 1s ease;
+}
+
+/* Sidebar/profile card styling */
+.sidebar, .profile {
+  background: rgba(255,255,255,0.85);
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  padding: 1.5em 1em;
+  margin-top: 2em;
+}
+
+/* Profile image enhancements */
+.profile img, .sidebar img {
+  border-radius: 50%;
+  border: 4px solid #fffbe7;
+  box-shadow: 0 2px 12px rgba(253,160,133,0.18);
+  margin-bottom: 1em;
+}
+
+/* Header, nav, and footer styling */
+header, nav {
   background: #6a82fb;
   color: #fff;
 }
 
+footer, .site-footer {
+  background: linear-gradient(90deg, #6a82fb 0%, #fc5c7d 100%);
+  color: #fff;
+  border-radius: 0 0 12px 12px;
+  margin-top: 2em;
+  padding: 1.5em 0;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  color: #3a3a8a;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+/* Links and buttons */
 a {
   color: #ff5858;
+  transition: color 0.2s;
 }
 
 a:hover {
   color: #ffb347;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  color: #3a3a8a;
+a.button, .btn {
+  display: inline-block;
+  background: linear-gradient(90deg, #fda085 0%, #f6d365 100%);
+  color: #222 !important;
+  padding: 0.5em 1.2em;
+  border-radius: 24px;
+  text-decoration: none;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(253,160,133,0.15);
+  transition: background 0.2s, color 0.2s;
 }
 
+a.button:hover, .btn:hover {
+  background: linear-gradient(90deg, #fc5c7d 0%, #6a82fb 100%);
+  color: #fff !important;
+}
+
+/* Post card styling */
 .post {
   background: #fffbe7;
   border-left: 5px solid #fda085;
   margin-bottom: 2em;
   padding: 1em;
   border-radius: 8px;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(24px);}
+  to { opacity: 1; transform: none;}
+}
+
+/* Responsive design */
+@media (max-width: 800px) {
+  .main-content, .page, .post, .archive, .sidebar, .profile {
+    padding: 1em;
+    margin: 1em 0;
+  }
+  nav, header {
+    font-size: 1em;
+  }
 }
