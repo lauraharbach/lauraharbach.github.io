@@ -1,0 +1,19 @@
+# _config.yml
+
+# Specify the theme you wish to use.
+# If you want to use a custom theme you've developed locally, set its name here.
+# For example:
+theme: AcademicPages
+
+# If you are using a remote theme (e.g., Minimal Mistakes or AcademicPages),
+# you can set the remote_theme instead:
+# remote_theme: "mmistakes/minimal-mistakes@latest"
+
+# Include custom directories to override assets, layouts, includes, etc.
+include:
+  - _layouts
+  - _includes
+  - assets
+
+# Place additional configuration options below as needed.
+# These settings ensure that your custom files are used instead of defaults.

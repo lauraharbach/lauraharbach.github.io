@@ -7,4 +7,4 @@ Hello and welcome to my website. I'm Laura Harbach, a researcher who enjoys appl
 
 Today, I translate these quantitative and computational skills to the fields of human migration and disaster modelling. I utilise techniques such as Agent-Based Modelling (ABM) to explore complex population dynamics. You can find details about specific research initiatives on the [Projects](/projects) page. My work also contributes to developing robust computational methodologies for high-performance and exascale computing, focusing on areas like Uncertainty Quantification and Sensitivity Analysis. Learn more about the methods I employ on the [Methodology](/methodology) page.
 
-This website provides an overview of my research interests, academic background, publications, and collaborations. Please explore the pages to learn more about my work in astrophysical simulations, migration and disaster modelling, and computational methodology.
+This website provides an overview of my research interests, academic background, publications, and collaborations. Please explore the pages to learn more about my work in astrophysical simulations, migration and disaster modelling. 
