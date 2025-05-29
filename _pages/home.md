@@ -1,7 +1,9 @@
 ---
-title: Dr. Laura Harbach - Research
+title: Dr. Laura Harbach - Researcher
 permalink: /
 ---
+
+# 🚧 Website Under Construction 🚧
 
 Hello and welcome to my website. I'm Laura Harbach, a researcher who enjoys applying advanced computational modelling and complex systems analysis to understand pressing socio-environmental challenges. My academic journey began in astrophysics, where I gained extensive experience in simulating complex, dynamic physical systems. I completed a PhD in Physics from Imperial College London, where my research focused on computational astrophysics. As part of my Master of Physics degree from the University of Southampton, I also had the wonderful opportunity to conduct research at the Harvard-Smithsonian Center for Astrophysics.
 

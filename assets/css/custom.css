@@ -1,0 +1,30 @@
+body {
+  background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+  color: #222;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+header, nav, footer {
+  background: #6a82fb;
+  color: #fff;
+}
+
+a {
+  color: #ff5858;
+}
+
+a:hover {
+  color: #ffb347;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #3a3a8a;
+}
+
+.post {
+  background: #fffbe7;
+  border-left: 5px solid #fda085;
+  margin-bottom: 2em;
+  padding: 1em;
+  border-radius: 8px;
+}
