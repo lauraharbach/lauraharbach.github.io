@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Variables
+   Variables (Modified to use Sage Green Palette)
    ========================================================================== */
 
 /*
@@ -8,7 +8,7 @@
 
 $doc-font-size              : 16;
 
-/* paragraph indention */
+/* paragraph indentation */
 $paragraph-indent           : false; // true, false (default)
 $indent-var                 : 1.3em;
 
@@ -47,26 +47,33 @@ $type-size-8                : 0.625em;  // ~10px
    Colors
    ========================================================================== */
 
+/* Define Sage Green Palette */
+$sage-green                 : #B6C4A2;
+$sage-light                 : #E6EAD9;
+$sage-dark                  : #758467;
+$off-white                  : #F6F6F2;
+
 $gray                       : #7a8288;
 $dark-gray                  : mix(#000, $gray, 40%);
 $darker-gray                : mix(#000, $gray, 60%);
 $light-gray                 : mix(#fff, $gray, 50%);
 $lighter-gray               : mix(#fff, $gray, 90%);
 
-$body-color                 : #fff;
-$background-color           : #fff;
-$code-background-color      : #fafafa;
+/* Use off-white for the backgrounds and sage green for primary accents */
+$body-color                 : $off-white;
+$background-color           : $off-white;
+$code-background-color      : $sage-light;
 $code-background-color-dark : $light-gray;
-$text-color                 : $dark-gray;
+$text-color                 : $sage-dark;
 $border-color               : $lighter-gray;
 
-$primary-color              : #7a8288;
-$success-color              : #62c462;
-$warning-color              : #f89406;
-$danger-color               : #ee5f5b;
-$info-color                 : #52adc8;
+$primary-color              : $sage-green;
+$success-color              : #62c462; // unchanged
+$warning-color              : #f89406; // unchanged
+$danger-color               : #ee5f5b; // unchanged
+$info-color                 : $sage-green;
 
-/* brands */
+/* brands remain unchanged */
 $behance-color              : #1769FF;
 $dribbble-color             : #ea4c89;
 $facebook-color             : #3b5998;
@@ -88,27 +95,18 @@ $vine-color                 : #00bf8f;
 $youtube-color              : #bb0000;
 $xing-color                 : #006567;
 
-
 /* links */
-$link-color                 : $info-color;
-$link-color-hover           : mix(#000, $link-color, 25%);
-$link-color-visited         : mix(#fff, $link-color, 25%);
-$masthead-link-color        : $primary-color;
-$masthead-link-color-hover  : mix(#000, $primary-color, 25%);
-
+$link-color                 : $sage-green;
+$link-color-hover           : mix(#000, $sage-green, 25%);
+$link-color-visited         : mix(#fff, $sage-green, 25%);
+$masthead-link-color        : $sage-green;
+$masthead-link-color-hover  : mix(#000, $sage-green, 25%);
 
 /*
    Breakpoints
    ========================================================================== */
 
 @include breakpoint-set("to ems", true);
-/*
-$small                      : 400px;
-$medium                     : 500px;
-$medium-wide                : 550px;
-$large                      : 1200px;
-$x-large                    : 1800px;
-*/
 
 $small                      : 600px !default;
 $medium                     : 768px !default;
@@ -132,6 +130,14 @@ $susy: (
   output: float,
   gutter-position: after,
   container: $large,
+  palette: (
+    reseda-green: #819171,
+    sage-green: $sage-green,
+    light-sage: $sage-light,
+    olive: $sage-dark,
+    muted-green: #A4B494,
+    off-white: $off-white,
+  ),
   global-box-sizing: border-box,
   // debug: (
   //   image: show,
@@ -140,7 +146,6 @@ $susy: (
   //   toggle: top right,
   // ),
 );
-
 
 /*
    Other
