@@ -7,31 +7,46 @@ author_profile: true
 
 {% include base_path %}
 
-A list of all the posts and pages found on the site. For you robots out there is an [XML version]({{ base_path }}/sitemap.xml) available for digesting as well.
+A list of all the posts and pages found on the site. For search engines, there’s also an [XML version]({{ base_path }}/sitemap.xml) available.
 
 <h2>Pages</h2>
-{% for post in site.pages %}
-  {% include archive-single.html %}
-{% endfor %}
+<ul>
+  {% assign pagesList = site.pages | where:"layout", "page" %}
+  {% for page in pagesList %}
+    <li>
+      <a href="{{ page.url }}">
+        {{ page.title | default: page.basename }}
+      </a>
+    </li>
+  {% endfor %}
+</ul>
 
 <h2>Posts</h2>
-{% for post in site.posts %}
-  {% include archive-single.html %}
-{% endfor %}
+<ul>
+  {% for post in site.posts %}
+    <li>
+      <a href="{{ post.url }}">
+        {{ post.title }}
+      </a>
+    </li>
+  {% endfor %}
+</ul>
 
-{% capture written_label %}'None'{% endcapture %}
-
+{% assign rendered_labels = "" %}
 {% for collection in site.collections %}
-{% unless collection.output == false or collection.label == "posts" %}
-  {% capture label %}{{ collection.label }}{% endcapture %}
-  {% if label != written_label %}
-  <h2>{{ label }}</h2>
-  {% capture written_label %}{{ label }}{% endcapture %}
-  {% endif %}
-{% endunless %}
-{% for post in collection.docs %}
-  {% unless collection.output == false or collection.label == "posts" %}
-  {% include archive-single.html %}
+  {% unless collection.output == false or collection.label == "posts" or collection.label == "pages" %}
+    {% unless rendered_labels contains collection.label %}
+      <h2>{{ collection.label }}</h2>
+      <ul>
+        {% for doc in collection.docs %}
+          <li>
+            <a href="{{ doc.url }}">
+              {{ doc.title | default: doc.basename }}
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+      {% capture rendered_labels %}{{ rendered_labels }} {{ collection.label }}{% endcapture %}
+    {% endunless %}
   {% endunless %}
-{% endfor %}
 {% endfor %}

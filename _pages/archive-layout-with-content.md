@@ -1,9 +1,16 @@
+<!--
+  This file establishes the overall structure and behavior of the page.
+
+  Purpose:
+  It serves as the interface for [insert application or feature name here], initializing UI components,
+  managing user interactions, and orchestrating the display of dynamic content. Future enhancements
+  and backend integrations can be added as the application evolves.
+-->
 ---
 title: "Archive Layout with Content"
 layout: archive
 permalink: /archive-layout-with-content/
 ---
-
 A variety of common markup showing how the theme styles them.
 
 # Header one

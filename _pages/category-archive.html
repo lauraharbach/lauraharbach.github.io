@@ -1,3 +1,25 @@
+<!-- 
+  Category Archive Page Documentation
+
+  Purpose:
+  This page generates an archive view that groups blog posts by their assigned categories.
+  It utilizes the "archive" layout and is accessible via the "/categories/" permalink.
+
+  Key Components:
+  - Base Path Inclusion:
+    The template includes a base path file for resolving relative paths.
+
+  - Grouping Posts:
+    It uses a collection of site posts and groups them based on the "categories" field.
+    Each group represents a category and a list of posts belonging to that category.
+
+  - Iteration and Rendering:
+    The template iterates over each category group:
+      - A category title is rendered with an ID generated through slugification.
+      - Posts within each category are iterated over, with each post rendered using the "archive-single.html" include.
+
+  Overall, this page serves to organize and display blog posts in an easy-to-navigate, category-based format for end users.
+-->
 ---
 layout: archive
 permalink: /categories/

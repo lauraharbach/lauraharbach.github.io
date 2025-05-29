@@ -1,4 +1,19 @@
 ---
+title: Publications
+permalink: /publications/
+---
+
+Here you can find a list of my academic publications, including peer-reviewed journal articles and preprints, reflecting my research in astrophysics and socio-environmental modelling.
+
+*This section will be updated with a dynamic or manually curated list of publications.*
+
+**Example Entry Format:**  
+Author(s). (Year). "Title of Paper." *Journal Name*, Volume(Issue), Pages. DOI.
+
+**External Profiles:**  
+- [ORCID](#)  
+- [Google Scholar](#)  
+- [ResearchGate](#)---
 layout: archive
 title: "Publications"
 permalink: /publications/
