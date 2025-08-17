@@ -1,5 +1,5 @@
 ---
-title: Dr. Laura Harbach - Researcher
+title: Dr. Laura Harbach - Computational Researcher Applying Experience in Complex Astrophysical Systems to Modelling Human Migration
 permalink: /
 ---
 
