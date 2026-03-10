@@ -1,5 +1,6 @@
 ---
 title: Collaborations
+eyebrow: "git shortlog -sn"
 permalink: /collaborations/
 ---
 

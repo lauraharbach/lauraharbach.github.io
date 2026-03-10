@@ -1,5 +1,6 @@
 ---
 title: Research Projects
+eyebrow: "find ./projects -maxdepth 2"
 permalink: /projects/
 ---
 

@@ -1,5 +1,6 @@
 ---
 title: Computational Methodology
+eyebrow: "python methods.py --explain"
 permalink: /methodology/
 ---
 

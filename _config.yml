@@ -1,63 +1,87 @@
-# =============================================================================
-# Site Configuration — lauraharbach.github.io
-# =============================================================================
+title: "Laura Harbach"
+name: "Laura Harbach"
+description: "Computational researcher working across astrophysics, migration modelling, and complex systems."
+url: "https://lauraharbach.github.io"
+baseurl: ""
+repository: "lauraharbach/lauraharbach.github.io"
+title_separator: "-"
 
-# --- Site identity ---
-title:       "Laura Harbach"
-name:        "Laura Harbach"
-description: "Computational Researcher — Astrophysics & Agent-Based Modeling"
-url:         "https://lauraharbach.github.io"
-baseurl:     ""
-repository:  "lauraharbach/lauraharbach.github.io"
-
-# --- Author ---
-author:
-  name:        "Laura Harbach"
-  email:       "l.harbach@brunel.ac.uk"
-  github:      "lauraharbach"
-  twitter:     "LauraHarbach"
-  orcid:       "0000-0001-7944-0292"
-
-# --- File processing ---
-include:
-  - _pages
+locale: "en-GB"
+permalink: /:title/
+future: false
+breadcrumbs: false
+read_more: "disabled"
+words_per_minute: 160
+talkmap_link: false
 encoding: "utf-8"
 markdown_ext: "markdown,mkdown,mkdn,mkd,md"
-future: true
+
+author:
+  name: "Laura Harbach"
+  avatar: "profile.png"
+  bio: "Computational researcher bridging astrophysics and humanitarian computer science."
+  location: "London, UK"
+  email: "l.harbach@brunel.ac.uk"
+  github: "lauraharbach"
+  twitter: "LauraHarbach"
+  orcid: "http://orcid.org/0000-0001-7944-0292"
+
+include:
+  - .htaccess
+  - _pages
+  - files
 
 exclude:
   - CHANGELOG.md
   - CONTRIBUTING.md
   - Gemfile
   - Gemfile.lock
+  - LICENSE
   - README.md
-  - vendor/
+  - SITE_STRUCTURE.md
   - talkmap.ipynb
   - talkmap.py
   - "*.sublime-project"
   - "*.sublime-workspace"
-  - node_modules/
+  - .asset-cache
+  - .bundle
+  - .jekyll-assets-cache
+  - .jekyll-cache
+  - .sass-cache
+  - _site
+  - log
+  - node_modules
+  - tmp
+  - vendor
   - package.json
   - assets/js/_main.js
   - assets/js/plugins
   - assets/js/vendor
 
-# --- Build ---
-markdown:    kramdown
+keep_files:
+  - .git
+  - .svn
+
+markdown: kramdown
 highlighter: rouge
-permalink:   /:title/
+lsi: false
+excerpt_separator: "\n\n"
+incremental: false
 
 kramdown:
-  input:      GFM
-  hard_wrap:  false
-  auto_ids:   true
+  input: GFM
+  hard_wrap: false
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  enable_coderay: false
 
-# --- Sass ---
 sass:
   sass_dir: _sass
-  style:    compressed
+  style: compressed
 
-# --- Defaults ---
 defaults:
   - scope:
       path: "_pages"
@@ -69,7 +93,6 @@ defaults:
     values:
       layout: "page"
 
-# --- Plugins ---
 plugins:
   - jekyll-sitemap
   - jekyll-feed
@@ -78,185 +101,36 @@ whitelist:
   - jekyll-sitemap
   - jekyll-feed
 
-title_separator          : "-"
-name                     : &name "Laura Harbach"
-description              : &description "Astrophysics PhD Student"
-url                      : https://lauraharbach.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
-baseurl                  : "" # the subpath of your site, e.g. "/blog"
-repository               : "lauraharbach/lauraharbach.github.io"
-teaser                   :  # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
-breadcrumbs              : false # true, false (default)
-words_per_minute         : 160
-future                   : true
-read_more                : "disabled" # if enabled, adds "Read more" links to excerpts
-talkmap_link             : false #change to true to add link to talkmap on talks page
-comments:
-  provider               : # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "custom"
-  disqus:
-    shortname            :
-  discourse:
-    server               : # https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963 , e.g.: meta.discourse.org
-  facebook:
-    appid                :
-    num_posts            : # 5 (default)
-    colorscheme          : dark # "light" (default), "dark"
-staticman:
-  allowedFields          : ['name', 'email', 'url', 'message']
-  branch                 : "gh-pages" # "master", "gh-pages"
-  commitMessage          : "New comment."
-  filename               : comment-{@timestamp}
-  format                 : "yml"
-  moderation             : true
-  path                   : "_data/comments/{options.slug}"
-  requiredFields         : ['name', 'email', 'message']
-  transforms:
-    email                : "md5"
-  generatedFields:
-    date:
-      type               : "date"
-      options:
-        format           : "iso8601" # "iso8601" (default), "timestamp-seconds", "timestamp-milliseconds"
 atom_feed:
-  path                   : # blank (default) uses feed.xml
+  path:
 
-# SEO Related
-google_site_verification :
-bing_site_verification   :
-alexa_site_verification  :
-yandex_site_verification :
+google_site_verification:
+bing_site_verification:
+alexa_site_verification:
+yandex_site_verification:
 
-# Social Sharing
 twitter:
-  username               : &twitter
+  username:
+
 facebook:
-  username               :
-  app_id                 :
-  publisher              :
-og_image                 :  # Open Graph/Twitter default site image
-# For specifying social profiles
-# - https://developers.google.com/structured-data/customize/social-profiles
+  username:
+  app_id:
+  publisher:
+
+og_image:
+
 social:
-  type                   : # Person or Organization (defaults to Person)
-  name                   : # If the user or organization name differs from the site's name
-  links: # An array of links to social media profiles
+  type: Person
+  name: "Laura Harbach"
+  links:
+    - "https://github.com/lauraharbach"
+    - "https://orcid.org/0000-0001-7944-0292"
 
-
-# Analytics
 analytics:
-  provider               :  "google-universal" # false (default), "google", "google-universal", "custom"
-  google:
-    tracking_id          :
+  provider: false
 
-
-# Site Author
-author:
-  name             : "Laura Harbach"
-  avatar           : "profile.png"
-  bio              : "Astrophysics PhD Student at Imperial College London"
-  location         : "London, UK"
-  employer         :
-  pubmed           :
-  googlescholar    :
-  email            : l.harbach19@imperial.ac.uk
-  researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
-  uri              :
-  bitbucket        :
-  codepen          :
-  dribbble         :
-  flickr           :
-  facebook         :
-  foursquare       :
-  github           : "lauraharbach"
-  google_plus      :
-  keybase          :
-  instagram        :
-  impactstory      : #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
-  lastfm           :
-  linkedin         :
-  orcid            : "http://orcid.org/0000-0001-7944-0292"
-  pinterest        :
-  soundcloud       :
-  stackoverflow    : # http://stackoverflow.com/users/123456/username
-  steam            :
-  tumblr           :
-  twitter          : "LauraHarbach"
-  vine             :
-  weibo            :
-  xing             :
-  youtube          :
-  wikipedia        :
-
-
-# Reading Files
-include:
-  - .htaccess
-  - _pages
-  - files
-exclude:
-  - "*.sublime-project"
-  - "*.sublime-workspace"
-  - .asset-cache
-  - .bundle
-  - .jekyll-assets-cache
-  - .sass-cache
-  - CHANGELOG
-  - Capfile
-  - Gemfile
-  - Gruntfile.js
-  - LICENSE
-  - README
-  - Rakefile
-  - assets/js/_main.js
-  - assets/js/plugins
-  - assets/js/vendor
-  - config
-  - gulpfile.js
-  - log
-  - node_modules
-  - package.json
-  - tmp
-  - vendor
-keep_files:
-  - .git
-  - .svn
-encoding: "utf-8"
-markdown_ext: "markdown,mkdown,mkdn,mkd,md"
-
-
-# Conversion
-markdown: kramdown
-highlighter: rouge
-lsi: false
-excerpt_separator: "\n\n"
-incremental: false
-
-
-# Markdown Processing
-kramdown:
-  input: GFM
-  hard_wrap: false
-  auto_ids: true
-  footnote_nr: 1
-  entity_output: as_char
-  toc_levels: 1..6
-  smart_quotes: lsquo,rsquo,ldquo,rdquo
-  enable_coderay: false
-
-
-# Collections
-collections:
-  teaching:
-    output: true
-    permalink: /:collection/:path/
-  publications:
-    output: true
-    permalink: /:collection/:path/
-  portfolio:
-    output: true
-    permalink: /:collection/:path/
-  talks:
-    output: true
-    permalink: /:collection/:path/
+comments:
+  provider:
 
 
 # Defaults
