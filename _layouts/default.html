@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  {% if site.github and site.github.build_revision %}
+    {% assign asset_version = site.github.build_revision %}
+  {% else %}
+    {% assign asset_version = site.time | date: "%s" %}
+  {% endif %}
   {% include lh-head.html %}
 </head>
 <body>
@@ -9,6 +14,6 @@
     {{ content }}
   </main>
   {% include lh-footer.html %}
-  <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+  <script src="{{ '/assets/js/main.js' | relative_url }}?v={{ asset_version }}"></script>
 </body>
 </html>
