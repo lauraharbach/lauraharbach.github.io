@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Publications
-eyebrow: "Selected papers and preprints"
+eyebrow: "grep --all ./publications"
 subtitle: "Peer-reviewed articles, preprints, and conference papers."
 permalink: /publications/
 ---

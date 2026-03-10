@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Research
-eyebrow: "Research themes"
+eyebrow: "ls -la ./research"
 subtitle: "Computational modeling across two disciplines — from stellar plasma to human migration."
 permalink: /research/
 ---

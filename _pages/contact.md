@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Contact
-eyebrow: "Get in touch"
+eyebrow: "ssh l.harbach@brunel.ac.uk"
 permalink: /contact/
 ---
 
