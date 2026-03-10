@@ -1,0 +1,100 @@
+// =============================================================================
+// Research & Publication Cards
+// =============================================================================
+
+.card {
+  background: $bg-surface;
+  border: 1px solid $border-subtle;
+  border-radius: $radius-lg;
+  padding: 1.6rem;
+  transition: border-color $t-normal, transform $t-normal, box-shadow $t-normal;
+  position: relative;
+  overflow: hidden;
+
+  // Coloured top accent line
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+  }
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 44px rgba(0, 0, 0, 0.35);
+  }
+
+  &.astro {
+    &::before { background: linear-gradient(90deg, $astro-primary, $astro-alt); }
+    &:hover {
+      border-color: $astro-border;
+      box-shadow: 0 14px 44px rgba(0,0,0,0.3), 0 0 28px $astro-glow;
+    }
+    .card-tag { color: $astro-primary; }
+  }
+
+  &.abm {
+    &::before { background: linear-gradient(90deg, $abm-primary, $abm-alt); }
+    &:hover {
+      border-color: $abm-border;
+      box-shadow: 0 14px 44px rgba(0,0,0,0.3), 0 0 28px $abm-glow;
+    }
+    .card-tag { color: $abm-primary; }
+  }
+
+  .card-tag {
+    font-family: $font-mono;
+    font-size: 0.68rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 0.8rem;
+    display: block;
+  }
+
+  h3 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: $text-primary;
+    margin-bottom: 0.6rem;
+    line-height: 1.4;
+  }
+
+  p {
+    font-size: 0.85rem;
+    color: $text-muted;
+    line-height: 1.65;
+    max-width: none;
+    margin: 0;
+  }
+
+  .card-footer {
+    margin-top: 1.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    border-top: 1px solid $border-subtle;
+    padding-top: 1rem;
+  }
+
+  .card-collab {
+    font-family: $font-mono;
+    font-size: 0.7rem;
+    color: $text-faint;
+    span { color: $text-muted; }
+  }
+
+  .card-link {
+    font-family: $font-mono;
+    font-size: 0.75rem;
+    color: $text-muted;
+    border: 1px solid $border-subtle;
+    padding: 0.3rem 0.7rem;
+    border-radius: $radius-sm;
+    transition: all $t-fast;
+    &:hover { border-color: $border-active; color: $text-secondary; }
+  }
+}

@@ -1,0 +1,65 @@
+// =============================================================================
+// LH Design Tokens
+// =============================================================================
+
+// --- Fonts ---
+$font-heading: 'Space Grotesk', system-ui, -apple-system, sans-serif;
+$font-body:    'Inter', system-ui, -apple-system, sans-serif;
+$font-mono:    'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
+
+// --- Backgrounds ---
+$bg-deep:     #080C14;
+$bg-base:     #0D1117;
+$bg-surface:  #161B22;
+$bg-elevated: #1C2128;
+$bg-overlay:  rgba(13, 17, 23, 0.92);
+
+// --- Borders ---
+$border-subtle:  #21262D;
+$border-default: #30363D;
+$border-active:  #484F58;
+
+// --- Text ---
+$text-primary:   #E6EDF3;
+$text-secondary: #C9D1D9;
+$text-muted:     #8B949E;
+$text-faint:     #6E7681;
+
+// --- Editor Syntax Colors (VS Code Dark+) ---
+$syn-blue:    #79B8FF;
+$syn-purple:  #B392F0;
+$syn-yellow:  #E3B341;
+$syn-orange:  #FFA657;
+$syn-red:     #FF7B72;
+$syn-green:   #56D364;
+$syn-teal:    #39C5CB;
+$syn-cyan:    #56CFDA;
+
+// --- Theme: Astrophysics ---
+$astro-primary: #79B8FF;
+$astro-alt:     #B392F0;
+$astro-glow:    rgba(121, 184, 255, 0.12);
+$astro-border:  rgba(121, 184, 255, 0.35);
+
+// --- Theme: ABM / Migration ---
+$abm-primary:   #56D364;
+$abm-alt:       #39C5CB;
+$abm-glow:      rgba(86, 211, 100, 0.12);
+$abm-border:    rgba(86, 211, 100, 0.35);
+
+// --- Layout ---
+$nav-height:    80px;
+$max-width:     1100px;
+$content-width: 760px;
+$radius-sm:     4px;
+$radius-md:     8px;
+$radius-lg:     16px;
+
+// --- Motion ---
+$t-fast:   150ms ease;
+$t-normal: 260ms ease;
+$t-slow:   420ms ease;
+
+// --- Z-index ---
+$z-nav:     100;
+$z-overlay: 200;

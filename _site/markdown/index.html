@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<title>Markdown — Laura Harbach</title>
+
+<meta name="description" content="Astrophysics PhD Student">
+<meta name="author" content="Laura Harbach">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Markdown">
+<meta property="og:description" content="Astrophysics PhD Student">
+<meta property="og:type" content="website">
+<meta property="og:url" content="http://localhost:4000/markdown/">
+
+<!-- Theme -->
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#0D1117">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<!-- Styles -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!-- Favicon: planet emoji as inline SVG -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🪐</text></svg>">
+<link rel="alternate icon" href="/favicon.ico">
+
+</head>
+<body>
+  <nav class="site-nav" id="site-nav" role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+
+    <a href="/" class="nav-brand" aria-label="Laura Harbach – home">
+      <span class="brand-bracket">{</span><span class="brand-name">LMH</span><span class="brand-bracket">}</span>
+    </a>
+
+    <button class="nav-toggle" id="nav-toggle"
+            aria-expanded="false" aria-controls="nav-links"
+            aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+
+    <ul class="nav-links" id="nav-links" role="list">
+      <li class="nav-link">
+        <a href="/about/"
+           >about</a>
+      </li>
+      <li class="nav-link">
+        <a href="/research/"
+           >research</a>
+      </li>
+      <li class="nav-link">
+        <a href="/publications/"
+           >publications</a>
+      </li>
+      <li class="nav-link">
+        <a href="/contact/"
+           >contact</a>
+      </li>
+    </ul>
+
+  </div>
+</nav>
+
+  <main id="main-content">
+    
+
+
+
+
+
+<div id="main" role="main">
+  
+
+
+  <div class="sidebar sticky">
+  
+
+
+
+<div itemscope itemtype="http://schema.org/Person">
+
+  <div class="author__avatar">
+    
+    	<img src="http://localhost:4000/images/profile.png" class="author__avatar" alt="Laura Harbach">
+    
+  </div>
+
+  <div class="author__content">
+    <h3 class="author__name">Laura Harbach</h3>
+    <p class="author__bio">Astrophysics PhD Student at Imperial College London</p>
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li><i class="fa fa-fw fa-map-marker" aria-hidden="true"></i> London, UK</li>
+      
+      
+      
+      
+        <li><a href="mailto:l.harbach19@imperial.ac.uk"><i class="fas fa-fw fa-envelope" aria-hidden="true"></i> Email</a></li>
+      
+      
+       
+      
+        <li><a href="https://twitter.com/LauraHarbach"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+        <li><a href="https://github.com/lauraharbach"><i class="fab fa-fw fa-github" aria-hidden="true"></i> Github</a></li>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+        <li><a href="http://orcid.org/0000-0001-7944-0292"><i class="ai ai-orcid-square ai-fw"></i> ORCID</a></li>
+      
+      
+      
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Markdown">
+    
+    
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 class="page__title" itemprop="headline">Markdown
+</h1>
+          
+        
+        
+        
+        
+             
+        
+    
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        <h2 id="locations-of-key-filesdirectories">Locations of key files/directories</h2>
+
+<ul>
+  <li>Basic config options: _config.yml</li>
+  <li>Top navigation bar config: _data/navigation.yml</li>
+  <li>Single pages: _pages/</li>
+  <li>Collections of pages are .md or .html files in:
+    <ul>
+      <li>_publications/</li>
+      <li>_portfolio/</li>
+      <li>_posts/</li>
+      <li>_teaching/</li>
+      <li>_talks/</li>
+    </ul>
+  </li>
+  <li>Footer: _includes/footer.html</li>
+  <li>Static files (like PDFs): /files/</li>
+  <li>Profile image (can set in _config.yml): images/profile.png</li>
+</ul>
+
+<h2 id="tips-and-hints">Tips and hints</h2>
+
+<ul>
+  <li>Name a file “.md” to have it render in markdown, name it “.html” to render in HTML.</li>
+  <li>Go to the <a href="https://github.com/academicpages/academicpages.github.io/commits/master">commit list</a> (on your repo) to find the last version Github built with Jekyll.
+    <ul>
+      <li>Green check: successful build</li>
+      <li>Orange circle: building</li>
+      <li>Red X: error</li>
+      <li>No icon: not built</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="resources">Resources</h2>
+<ul>
+  <li><a href="https://shopify.github.io/liquid/tags/control-flow/">Liquid syntax guide</a></li>
+</ul>
+
+<h2 id="markdown-guide">Markdown guide</h2>
+
+<h3 id="header-three">Header three</h3>
+
+<h4 id="header-four">Header four</h4>
+
+<h5 id="header-five">Header five</h5>
+
+<h6 id="header-six">Header six</h6>
+
+<h2 id="blockquotes">Blockquotes</h2>
+
+<p>Single line blockquote:</p>
+
+<blockquote>
+  <p>Quotes are cool.</p>
+</blockquote>
+
+<h2 id="tables">Tables</h2>
+
+<h3 id="table-1">Table 1</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Entry</th>
+      <th>Item</th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="#">John Doe</a></td>
+      <td>2016</td>
+      <td>Description of the item in the list</td>
+    </tr>
+    <tr>
+      <td><a href="#">Jane Doe</a></td>
+      <td>2019</td>
+      <td>Description of the item in the list</td>
+    </tr>
+    <tr>
+      <td><a href="#">Doe Doe</a></td>
+      <td>2022</td>
+      <td>Description of the item in the list</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="table-2">Table 2</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Header1</th>
+      <th style="text-align: center">Header2</th>
+      <th style="text-align: right">Header3</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">cell1</td>
+      <td style="text-align: center">cell2</td>
+      <td style="text-align: right">cell3</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">cell4</td>
+      <td style="text-align: center">cell5</td>
+      <td style="text-align: right">cell6</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td style="text-align: left">cell1</td>
+      <td style="text-align: center">cell2</td>
+      <td style="text-align: right">cell3</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">cell4</td>
+      <td style="text-align: center">cell5</td>
+      <td style="text-align: right">cell6</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <td style="text-align: left">Foot1</td>
+      <td style="text-align: center">Foot2</td>
+      <td style="text-align: right">Foot3</td>
+    </tr>
+  </tfoot>
+</table>
+
+<h2 id="definition-lists">Definition Lists</h2>
+
+<dl>
+  <dt>Definition List Title</dt>
+  <dd>Definition list division.</dd>
+  <dt>Startup</dt>
+  <dd>A startup company or startup is a company or temporary organization designed to search for a repeatable and scalable business model.</dd>
+  <dt>#dowork</dt>
+  <dd>Coined by Rob Dyrdek and his personal body guard Christopher “Big Black” Boykins, “Do Work” works as a self motivator, to motivating your friends.</dd>
+  <dt>Do It Live</dt>
+  <dd>I’ll let Bill O’Reilly <a href="https://www.youtube.com/watch?v=O_HyZ5aW76c" title="We'll Do It Live">explain</a> this one.</dd>
+</dl>
+
+<h2 id="unordered-lists-nested">Unordered Lists (Nested)</h2>
+
+<ul>
+  <li>List item one
+    <ul>
+      <li>List item one
+        <ul>
+          <li>List item one</li>
+          <li>List item two</li>
+          <li>List item three</li>
+          <li>List item four</li>
+        </ul>
+      </li>
+      <li>List item two</li>
+      <li>List item three</li>
+      <li>List item four</li>
+    </ul>
+  </li>
+  <li>List item two</li>
+  <li>List item three</li>
+  <li>List item four</li>
+</ul>
+
+<h2 id="ordered-list-nested">Ordered List (Nested)</h2>
+
+<ol>
+  <li>List item one
+    <ol>
+      <li>List item one
+        <ol>
+          <li>List item one</li>
+          <li>List item two</li>
+          <li>List item three</li>
+          <li>List item four</li>
+        </ol>
+      </li>
+      <li>List item two</li>
+      <li>List item three</li>
+      <li>List item four</li>
+    </ol>
+  </li>
+  <li>List item two</li>
+  <li>List item three</li>
+  <li>List item four</li>
+</ol>
+
+<h2 id="buttons">Buttons</h2>
+
+<p>Make any link standout more when applying the <code class="language-plaintext highlighter-rouge">.btn</code> class.</p>
+
+<h2 id="notices">Notices</h2>
+
+<p class="notice"><strong>Watch out!</strong> You can also add notices by appending <code class="language-plaintext highlighter-rouge">{: .notice}</code> to a paragraph.</p>
+
+<h2 id="html-tags">HTML Tags</h2>
+
+<h3 id="address-tag">Address Tag</h3>
+
+<address>
+  1 Infinite Loop<br /> Cupertino, CA 95014<br /> United States
+</address>
+
+<h3 id="anchor-tag-aka-link">Anchor Tag (aka. Link)</h3>
+
+<p>This is an example of a <a href="http://github.com" title="Github">link</a>.</p>
+
+<h3 id="abbreviation-tag">Abbreviation Tag</h3>
+
+<p>The abbreviation <abbr title="Cascading Style Sheets">CSS</abbr> stands for “Cascading Style Sheets”.</p>
+
+<h3 id="cite-tag">Cite Tag</h3>
+
+<p>“Code is poetry.” —<cite>Automattic</cite></p>
+
+<h3 id="code-tag">Code Tag</h3>
+
+<p>You will learn later on in these tests that <code class="language-plaintext highlighter-rouge">word-wrap: break-word;</code> will be your best friend.</p>
+
+<h3 id="strike-tag">Strike Tag</h3>
+
+<p>This tag will let you <strike>strikeout text</strike>.</p>
+
+<h3 id="emphasize-tag">Emphasize Tag</h3>
+
+<p>The emphasize tag should <em>italicize</em> text.</p>
+
+<h3 id="insert-tag">Insert Tag</h3>
+
+<p>This tag should denote <ins>inserted</ins> text.</p>
+
+<h3 id="keyboard-tag">Keyboard Tag</h3>
+
+<p>This scarcely known tag emulates <kbd>keyboard text</kbd>, which is usually styled like the <code class="language-plaintext highlighter-rouge">&lt;code&gt;</code> tag.</p>
+
+<h3 id="preformatted-tag">Preformatted Tag</h3>
+
+<p>This tag styles large blocks of code.</p>
+
+<pre>
+.post-title {
+  margin: 0 0 5px;
+  font-weight: bold;
+  font-size: 38px;
+  line-height: 1.2;
+  and here's a line of some really, really, really, really long text, just to see how the PRE tag handles it and to find out how it overflows;
+}
+</pre>
+
+<h3 id="quote-tag">Quote Tag</h3>
+
+<p><q>Developers, developers, developers…</q> –Steve Ballmer</p>
+
+<h3 id="strong-tag">Strong Tag</h3>
+
+<p>This tag shows <strong>bold text</strong>.</p>
+
+<h3 id="subscript-tag">Subscript Tag</h3>
+
+<p>Getting our science styling on with H<sub>2</sub>O, which should push the “2” down.</p>
+
+<h3 id="superscript-tag">Superscript Tag</h3>
+
+<p>Still sticking with science and Isaac Newton’s E = MC<sup>2</sup>, which should lift the 2 up.</p>
+
+<h3 id="variable-tag">Variable Tag</h3>
+
+<p>This allows you to denote <var>variables</var>.</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+
+
+      </footer>
+
+      
+
+      
+
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+  </main>
+  <footer class="site-footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-inner">
+
+      <div class="footer-brand">
+        <span class="brand-bracket">{</span><span class="brand-name">LMH</span><span class="brand-bracket">}</span>
+        <p>Dr. Laura Harbach<br>Computational Researcher<br>Brunel University London</p>
+      </div>
+
+      <div class="footer-nav">
+        <h4>pages</h4>
+        <ul>
+          <li><a href="/about/">about</a></li>
+          <li><a href="/research/">research</a></li>
+          <li><a href="/publications/">publications</a></li>
+          <li><a href="/contact/">contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-connect">
+        <h4>connect</h4>
+        <ul>
+          <li><a href="https://github.com/lauraharbach" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+          <li><a href="https://orcid.org/0000-0001-7944-0292" target="_blank" rel="noopener noreferrer">ORCID</a></li>
+          <li><a href="https://twitter.com/LauraHarbach" target="_blank" rel="noopener noreferrer">Twitter / X</a></li>
+          <li><a href="mailto:l.harbach@brunel.ac.uk">Email</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p class="footer-copy">
+        <span class="c-comment">/* </span>
+        Built with Jekyll &middot;
+        <span class="c-string">Laura Harbach</span> &middot;
+        2026
+        <span class="c-comment"> */</span>
+      </p>
+    </div>
+  </div>
+</footer>
+
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>

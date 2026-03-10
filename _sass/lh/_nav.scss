@@ -1,0 +1,115 @@
+// =============================================================================
+// Navigation
+// =============================================================================
+
+.site-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: $z-nav;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  padding: 0 1.5rem;
+  background: transparent;
+  border-bottom: 1px solid transparent;
+  transition: background $t-normal, border-color $t-normal, backdrop-filter $t-normal;
+
+  &.scrolled {
+    background: rgba($bg-base, 0.88);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-bottom-color: $border-subtle;
+  }
+}
+
+.nav-inner {
+  max-width: $max-width;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+// --- Brand ---
+.nav-brand {
+  font-family: $font-mono;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: $text-primary;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  transition: opacity $t-fast;
+  &:hover { opacity: 0.8; color: $text-primary; }
+
+  .brand-bracket { color: $syn-green; font-size: 1.35rem; }
+  .brand-name    { color: $syn-yellow; font-size: 1.25rem; }
+}
+
+// --- Links ---
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  list-style: none;
+}
+
+.nav-link a {
+  font-family: $font-mono;
+  font-size: 0.95rem;
+  color: $text-muted;
+  padding: 0.55rem 1rem;
+  border-radius: $radius-sm;
+  transition: color $t-fast, background $t-fast;
+  display: block;
+  position: relative;
+
+  &::before {
+    content: '// ';
+    color: transparent;
+    transition: color $t-fast;
+    font-size: 0.7rem;
+  }
+
+  &:hover {
+    color: $text-primary;
+    background: rgba($bg-surface, 0.6);
+    &::before { color: $syn-green; }
+  }
+
+  &.active {
+    color: $syn-blue;
+    &::before { color: $syn-green; }
+  }
+}
+
+// --- Mobile Toggle ---
+.nav-toggle {
+  display: none;
+  background: none;
+  border: 1px solid $border-default;
+  border-radius: $radius-sm;
+  padding: 0.45rem 0.6rem;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 5px;
+
+  span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: $text-secondary;
+    border-radius: 2px;
+    transition: transform $t-fast, opacity $t-fast;
+  }
+
+  &.open {
+    span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    span:nth-child(2) { opacity: 0; }
+    span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  }
+}

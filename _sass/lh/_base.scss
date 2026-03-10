@@ -1,0 +1,184 @@
+// =============================================================================
+// Base Reset & Typography
+// =============================================================================
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background-color: $bg-base;
+  color: $text-primary;
+  font-family: $font-body;
+  font-size: 1rem;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+// --- Headings ---
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-heading;
+  font-weight: 600;
+  line-height: 1.2;
+  color: $text-primary;
+}
+
+h1 { font-size: clamp(2rem, 5vw, 3.25rem); }
+h2 { font-size: clamp(1.5rem, 3vw, 2.25rem); }
+h3 { font-size: clamp(1.15rem, 2vw, 1.45rem); }
+h4 { font-size: 1.1rem; }
+
+p {
+  color: $text-secondary;
+  max-width: 72ch;
+}
+
+a {
+  color: $syn-blue;
+  text-decoration: none;
+  transition: color $t-fast;
+  &:hover { color: lighten($syn-blue, 12%); }
+}
+
+code {
+  font-family: $font-mono;
+  font-size: 0.875em;
+  background: $bg-surface;
+  padding: 0.15em 0.4em;
+  border-radius: $radius-sm;
+  color: $syn-orange;
+  border: 1px solid $border-subtle;
+}
+
+pre {
+  font-family: $font-mono;
+  background: $bg-surface;
+  padding: 1.5rem;
+  border-radius: $radius-md;
+  border: 1px solid $border-default;
+  overflow-x: auto;
+  code {
+    background: none;
+    padding: 0;
+    border: none;
+    font-size: 0.9rem;
+  }
+}
+
+img { max-width: 100%; height: auto; }
+
+::selection {
+  background: rgba($astro-primary, 0.28);
+  color: $text-primary;
+}
+
+// --- Scrollbar ---
+::-webkit-scrollbar { width: 6px; background: $bg-deep; }
+::-webkit-scrollbar-thumb {
+  background: $border-active;
+  border-radius: 3px;
+  &:hover { background: $text-faint; }
+}
+
+// --- Layout Utility ---
+.container {
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+// --- Section Label (// comment style) ---
+.section-label {
+  font-family: $font-mono;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: $text-faint;
+  display: block;
+  margin-bottom: 0.6rem;
+  &::before { content: '// '; color: $syn-green; }
+}
+
+// --- Scroll reveal ---
+.reveal {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity $t-slow, transform $t-slow;
+  &.revealed {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// --- Buttons ---
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: $font-mono;
+  font-size: 0.82rem;
+  font-weight: 500;
+  padding: 0.6rem 1.25rem;
+  border-radius: $radius-md;
+  border: 1px solid;
+  text-decoration: none;
+  transition: all $t-fast;
+  cursor: pointer;
+  white-space: nowrap;
+  background: none;
+
+  &-primary {
+    background: rgba($astro-primary, 0.08);
+    border-color: $astro-border;
+    color: $astro-primary;
+    &:hover {
+      background: rgba($astro-primary, 0.16);
+      color: lighten($astro-primary, 8%);
+    }
+  }
+
+  &-green {
+    background: rgba($abm-primary, 0.08);
+    border-color: $abm-border;
+    color: $abm-primary;
+    &:hover {
+      background: rgba($abm-primary, 0.16);
+      color: lighten($abm-primary, 8%);
+    }
+  }
+
+  &-ghost {
+    background: transparent;
+    border-color: $border-default;
+    color: $text-muted;
+    &:hover {
+      border-color: $border-active;
+      color: $text-secondary;
+    }
+  }
+}
+
+// --- Screen-reader only ---
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}

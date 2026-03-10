@@ -1,0 +1,375 @@
+// =============================================================================
+// Inner Pages — About, Research, Publications, Contact
+// =============================================================================
+
+.page-wrapper {
+  padding-top: calc(#{$nav-height} + 3.5rem);
+  padding-bottom: 6rem;
+  min-height: 100vh;
+}
+
+.page-header {
+  margin-bottom: 3.5rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid $border-subtle;
+
+  .page-eyebrow {
+    font-family: $font-mono;
+    font-size: 0.72rem;
+    color: $syn-green;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 0.8rem;
+    display: block;
+    &::before { content: '$ '; color: $text-faint; }
+  }
+
+  h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    line-height: 1.1;
+    background: linear-gradient(135deg, $text-primary 40%, $text-muted 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin: 0;
+  }
+
+  .page-subtitle {
+    margin-top: 0.8rem;
+    font-size: 1.05rem;
+    color: $text-muted;
+    max-width: 60ch;
+  }
+}
+
+.page-content {
+  h2 {
+    font-size: 1.45rem;
+    margin: 2.5rem 0 1rem;
+    color: $text-primary;
+    &:first-child { margin-top: 0; }
+  }
+  h3 {
+    font-size: 1.15rem;
+    margin: 2rem 0 0.7rem;
+    color: $syn-blue;
+  }
+  p { margin-bottom: 1.2rem; color: $text-secondary; }
+  ul, ol {
+    padding-left: 1.5rem;
+    color: $text-secondary;
+    li { margin-bottom: 0.4rem; }
+  }
+  strong { color: $text-primary; font-weight: 500; }
+  a {
+    text-decoration: underline;
+    text-decoration-color: rgba($syn-blue, 0.4);
+    text-underline-offset: 2px;
+    &:hover { text-decoration-color: $syn-blue; }
+  }
+}
+
+// ============================================================================
+// About Page — 2-column with sticky sidebar
+// ============================================================================
+.about-layout {
+  display: grid;
+  grid-template-columns: 1fr 285px;
+  gap: 4rem;
+  align-items: start;
+}
+
+.about-main {}
+
+.about-sidebar {
+  position: sticky;
+  top: calc(#{$nav-height} + 2rem);
+
+  .sidebar-block {
+    margin-bottom: 1.75rem;
+    padding: 1.25rem;
+    background: $bg-surface;
+    border: 1px solid $border-subtle;
+    border-radius: $radius-md;
+  }
+
+  .sidebar-heading {
+    font-family: $font-mono;
+    font-size: 0.65rem;
+    font-weight: 400;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: $text-faint;
+    margin-bottom: 1rem;
+    &::before { content: '// '; color: $syn-green; }
+  }
+
+  .info-row {
+    display: flex;
+    gap: 0.75rem;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid $border-subtle;
+    font-size: 0.82rem;
+    &:last-child { border-bottom: none; padding-bottom: 0; }
+
+    .info-label {
+      font-family: $font-mono;
+      font-size: 0.7rem;
+      color: $text-faint;
+      min-width: 55px;
+      padding-top: 1px;
+    }
+    .info-value { color: $text-secondary; flex: 1; }
+  }
+
+  .link-row {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.5rem 0.6rem;
+    margin: 0 -0.25rem;
+    border-radius: $radius-sm;
+    transition: background $t-fast;
+    font-family: $font-mono;
+    font-size: 0.78rem;
+    color: $text-muted;
+    text-decoration: none;
+
+    &:hover { background: $bg-elevated; color: $syn-blue; }
+
+    .link-icon { font-size: 0.9rem; width: 18px; text-align: center; }
+  }
+}
+
+// ============================================================================
+// Research Page — domain sections
+// ============================================================================
+.research-domain {
+  margin-bottom: 4.5rem;
+  padding-bottom: 4rem;
+  border-bottom: 1px solid $border-subtle;
+  &:last-child { border-bottom: none; margin-bottom: 0; }
+
+  .domain-heading {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.75rem;
+
+    .domain-icon-badge {
+      width: 44px;
+      height: 44px;
+      border-radius: $radius-md;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.35rem;
+      flex-shrink: 0;
+    }
+
+    h2 { margin: 0; font-size: 1.6rem; }
+    .domain-sub {
+      font-family: $font-mono;
+      font-size: 0.75rem;
+      color: $text-faint;
+      margin-top: 0.2rem;
+    }
+  }
+
+  .domain-intro {
+    font-size: 0.925rem;
+    color: $text-muted;
+    max-width: 75ch;
+    margin-bottom: 2rem;
+    line-height: 1.75;
+  }
+
+  .projects-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+  }
+
+  .project-entry {
+    padding: 1.4rem 1.6rem;
+    background: $bg-surface;
+    border: 1px solid $border-subtle;
+    border-radius: $radius-md;
+    border-left: 3px solid;
+    transition: border-color $t-fast, background $t-fast;
+
+    h3 {
+      font-size: 1rem;
+      margin-bottom: 0.4rem;
+      color: $text-primary;
+    }
+    p {
+      font-size: 0.85rem;
+      color: $text-muted;
+      margin: 0;
+    }
+    .project-meta {
+      font-family: $font-mono;
+      font-size: 0.7rem;
+      color: $text-faint;
+      margin-top: 0.6rem;
+    }
+  }
+
+  .collab-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-top: 1.5rem;
+    align-items: center;
+
+    .collab-label {
+      font-family: $font-mono;
+      font-size: 0.7rem;
+      color: $text-faint;
+      margin-right: 0.25rem;
+    }
+    .collab-tag {
+      font-family: $font-mono;
+      font-size: 0.7rem;
+      padding: 0.15rem 0.5rem;
+      border-radius: 99px;
+      border: 1px solid;
+    }
+  }
+
+  &.astro {
+    .domain-icon-badge { background: rgba($astro-primary, 0.1); color: $astro-primary; }
+    h2 { color: $astro-primary; }
+    .project-entry {
+      border-left-color: rgba($astro-primary, 0.4);
+      &:hover { border-color: $astro-border; background: $bg-elevated; }
+    }
+    .collab-tag { color: $astro-alt; border-color: rgba($astro-alt, 0.3); }
+  }
+
+  &.abm {
+    .domain-icon-badge { background: rgba($abm-primary, 0.1); color: $abm-primary; }
+    h2 { color: $abm-primary; }
+    .project-entry {
+      border-left-color: rgba($abm-primary, 0.4);
+      &:hover { border-color: $abm-border; background: $bg-elevated; }
+    }
+    .collab-tag { color: $abm-alt; border-color: rgba($abm-alt, 0.3); }
+  }
+}
+
+// ============================================================================
+// Publications Page — full list
+// ============================================================================
+.pubs-page {
+  .pub-year-group {
+    margin-bottom: 3rem;
+    h2 {
+      font-family: $font-mono;
+      font-size: 0.75rem;
+      color: $syn-green;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+      font-weight: 400;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid $border-subtle;
+    }
+  }
+
+  .full-pub-list { list-style: none; }
+
+  .full-pub-item {
+    padding: 1.4rem 0;
+    border-bottom: 1px solid $border-subtle;
+    &:last-child { border-bottom: none; }
+
+    h3 {
+      font-size: 0.975rem;
+      font-weight: 500;
+      color: $text-primary;
+      margin-bottom: 0.35rem;
+      line-height: 1.5;
+    }
+    .pub-authors {
+      font-size: 0.82rem;
+      color: $text-muted;
+      margin-bottom: 0.3rem;
+    }
+    .pub-venue {
+      font-size: 0.8rem;
+      color: $text-faint;
+      font-style: italic;
+    }
+    .pub-actions {
+      margin-top: 0.7rem;
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .pub-link {
+      font-family: $font-mono;
+      font-size: 0.72rem;
+      padding: 0.2rem 0.6rem;
+      border: 1px solid $border-subtle;
+      border-radius: $radius-sm;
+      color: $text-muted;
+      transition: all $t-fast;
+      &:hover { border-color: $syn-blue; color: $syn-blue; }
+    }
+  }
+}
+
+// ============================================================================
+// Contact Page — Terminal style
+// ============================================================================
+.contact-page {
+  max-width: 640px;
+}
+
+.terminal-window {
+  background: $bg-surface;
+  border: 1px solid $border-default;
+  border-radius: $radius-lg;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+}
+
+.terminal-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.7rem 1rem;
+  background: $bg-elevated;
+  border-bottom: 1px solid $border-subtle;
+
+  .dot { width: 11px; height: 11px; border-radius: 50%; }
+  .red    { background: #FF5F57; }
+  .yellow { background: #FFBD2E; }
+  .green  { background: #28CA41; }
+
+  .t-title {
+    font-family: $font-mono;
+    font-size: 0.72rem;
+    color: $text-faint;
+    margin-left: 0.4rem;
+  }
+}
+
+.terminal-body {
+  padding: 1.6rem 1.75rem;
+  font-family: $font-mono;
+  font-size: 0.875rem;
+  line-height: 2.1;
+
+  .t-cmd    { color: $syn-green; display: block;
+               &::before { content: '$ '; color: $text-faint; } }
+  .t-out    { color: $text-secondary; display: block; padding-left: 1rem; }
+  .t-link   { color: $syn-blue; text-decoration: underline; text-decoration-color: rgba($syn-blue, 0.35); text-underline-offset: 2px;
+               &:hover { text-decoration-color: $syn-blue; } }
+  .t-comment{ color: $text-faint; font-style: italic; display: block; padding-left: 1rem; }
+  .t-gap    { display: block; height: 0.6rem; }
+  .t-cursor { display: inline-block; width: 2px; height: 1em; background: $syn-green; vertical-align: text-bottom; animation: lh-blink 1.1s step-end infinite; }
+}

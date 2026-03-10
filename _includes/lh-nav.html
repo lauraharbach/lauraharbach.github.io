@@ -1,0 +1,34 @@
+<nav class="site-nav" id="site-nav" role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+
+    <a href="{{ '/' | relative_url }}" class="nav-brand" aria-label="{{ site.title }} – home">
+      <span class="brand-bracket">{</span><span class="brand-name">LMH</span><span class="brand-bracket">}</span>
+    </a>
+
+    <button class="nav-toggle" id="nav-toggle"
+            aria-expanded="false" aria-controls="nav-links"
+            aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+
+    <ul class="nav-links" id="nav-links" role="list">
+      <li class="nav-link">
+        <a href="{{ '/about/' | relative_url }}"
+           {% if page.url contains '/about' %}class="active" aria-current="page"{% endif %}>about</a>
+      </li>
+      <li class="nav-link">
+        <a href="{{ '/research/' | relative_url }}"
+           {% if page.url contains '/research' %}class="active" aria-current="page"{% endif %}>research</a>
+      </li>
+      <li class="nav-link">
+        <a href="{{ '/publications/' | relative_url }}"
+           {% if page.url contains '/publications' %}class="active" aria-current="page"{% endif %}>publications</a>
+      </li>
+      <li class="nav-link">
+        <a href="{{ '/contact/' | relative_url }}"
+           {% if page.url contains '/contact' %}class="active" aria-current="page"{% endif %}>contact</a>
+      </li>
+    </ul>
+
+  </div>
+</nav>

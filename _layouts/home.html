@@ -1,0 +1,288 @@
+---
+layout: default
+---
+
+<!-- =====================================================================
+     HERO — starfield canvas + code window + planet
+     ===================================================================== -->
+<section class="hero" id="hero" aria-label="Introduction">
+  <canvas id="hero-canvas" aria-hidden="true"></canvas>
+
+  <div class="hero-inner">
+
+    <!-- Code window -->
+    <div class="hero-code">
+      <div class="code-window">
+        <div class="code-titlebar" aria-hidden="true">
+          <span class="dot red"></span>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
+          <span class="filename">researcher.ts</span>
+        </div>
+        <div class="code-body" aria-label="Introduction as code">
+          <span class="ln"><span class="c-comment">// Dr. Laura Harbach</span></span>
+          <span class="ln">&nbsp;</span>
+          <span class="ln"><span class="c-keyword">const</span> <span class="c-var">researcher</span> <span class="c-punct">= {</span></span>
+          <span class="ln">  <span class="c-prop">name</span><span class="c-punct">:</span>     <span class="c-string">"Laura Harbach"</span><span class="c-punct">,</span></span>
+          <span class="ln">  <span class="c-prop">role</span><span class="c-punct">:</span>     <span class="c-string">"Computational Researcher"</span><span class="c-punct">,</span></span>
+          <span class="ln">  <span class="c-prop">at</span><span class="c-punct">:</span>       <span class="c-string">"Brunel University London"</span><span class="c-punct">,</span></span>
+          <span class="ln">  <span class="c-prop">domains</span><span class="c-punct">: [</span></span>
+          <span class="ln">    <span class="c-string">"Astrophysics"</span><span class="c-punct">,</span>            <span class="c-comment">// M-dwarf space weather</span></span>
+          <span class="ln">    <span class="c-string">"Agent-Based Modeling"</span><span class="c-punct">,</span>    <span class="c-comment">// Climate migration</span></span>
+          <span class="ln">    <span class="c-string">"Uncertainty Quantification"</span> <span class="c-comment">// HPC &amp; policy</span></span>
+          <span class="ln">  <span class="c-punct">],</span></span>
+          <span class="ln">  <span class="c-prop">tools</span><span class="c-punct">:</span>   <span class="c-bracket">[</span><span class="c-string">"MHD"</span><span class="c-punct">,</span> <span class="c-string">"ABM"</span><span class="c-punct">,</span> <span class="c-string">"HPC"</span><span class="c-punct">,</span> <span class="c-string">"Python"</span><span class="c-punct">,</span> <span class="c-string">"C++"</span><span class="c-bracket">]</span></span>
+          <span class="ln"><span class="c-punct">};</span></span>
+          <span class="ln">&nbsp;</span>
+          <span class="ln"><span class="c-method">console</span><span class="c-punct">.</span><span class="c-method">log</span><span class="c-punct">(</span><span class="c-var">researcher</span><span class="c-punct">);</span><span class="cursor" aria-hidden="true"></span></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Planet visual -->
+    <div class="hero-visual" aria-hidden="true">
+      <div class="planet-system">
+        <div class="planet-glow"></div>
+        <div class="planet"></div>
+        <div class="orbit orbit-1"></div>
+        <div class="orbit orbit-2"></div>
+        <div class="orbit-dot"></div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="hero-scroll" aria-hidden="true">
+    <span>scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+
+<!-- =====================================================================
+     DOMAINS — two research tracks
+     ===================================================================== -->
+<section class="section domains" id="domains" aria-label="Research domains">
+  <div class="container">
+
+    <div class="section-header reveal">
+      <span class="section-label">research domains</span>
+      <h2>Two worlds, <span>one methodology</span></h2>
+    </div>
+
+    <div class="domains-grid">
+
+      <!-- Astrophysics -->
+      <article class="domain-card astro reveal">
+        <svg class="domain-pattern" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="100" cy="100" r="92" fill="none" stroke="currentColor" stroke-width="0.6"/>
+          <circle cx="100" cy="100" r="68" fill="none" stroke="currentColor" stroke-width="0.6"/>
+          <circle cx="100" cy="100" r="44" fill="none" stroke="currentColor" stroke-width="0.6"/>
+          <ellipse cx="100" cy="100" rx="96" ry="26" fill="none" stroke="currentColor" stroke-width="1" transform="rotate(-18 100 100)"/>
+          <circle cx="100" cy="100" r="16" fill="currentColor" opacity="0.18"/>
+          <circle cx="155" cy="60" r="3" fill="currentColor" opacity="0.5"/>
+          <circle cx="42" cy="130" r="2" fill="currentColor" opacity="0.4"/>
+          <circle cx="170" cy="140" r="1.5" fill="currentColor" opacity="0.35"/>
+        </svg>
+
+        <div class="domain-tag">Astrophysics</div>
+        <h3>Exoplanet Atmospheres &amp; Stellar Winds</h3>
+        <p>3D Magnetohydrodynamic simulations of stellar wind interactions with close-in exoplanet atmospheres. Investigating how space weather from M-dwarf stars like AU Mic drives atmospheric escape and shapes observable Lyman-alpha signatures.</p>
+
+        <div class="domain-skills">
+          <span class="skill-tag">MHD Simulations</span>
+          <span class="skill-tag">Space Weather</span>
+          <span class="skill-tag">Lyman-&alpha;</span>
+          <span class="skill-tag">Photoevaporation</span>
+          <span class="skill-tag">AU Mic</span>
+        </div>
+
+        <div class="domain-cta">
+          <a href="{{ '/research/' | relative_url }}" class="btn btn-primary">Explore research →</a>
+        </div>
+      </article>
+
+      <!-- ABM / Migration -->
+      <article class="domain-card abm reveal">
+        <svg class="domain-pattern" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <!-- Topographic contour lines -->
+          <ellipse cx="100" cy="102" rx="90" ry="58" fill="none" stroke="currentColor" stroke-width="0.8"/>
+          <ellipse cx="100" cy="106" rx="72" ry="44" fill="none" stroke="currentColor" stroke-width="0.8"/>
+          <ellipse cx="100" cy="109" rx="52" ry="30" fill="none" stroke="currentColor" stroke-width="0.8"/>
+          <ellipse cx="100" cy="112" rx="32" ry="18" fill="none" stroke="currentColor" stroke-width="0.8"/>
+          <ellipse cx="100" cy="114" rx="14" ry="8" fill="currentColor" opacity="0.12"/>
+          <!-- Grid overlay -->
+          <line x1="0" y1="50" x2="200" y2="50" stroke="currentColor" stroke-width="0.3" opacity="0.4"/>
+          <line x1="0" y1="100" x2="200" y2="100" stroke="currentColor" stroke-width="0.3" opacity="0.4"/>
+          <line x1="0" y1="150" x2="200" y2="150" stroke="currentColor" stroke-width="0.3" opacity="0.4"/>
+          <line x1="50" y1="0" x2="50" y2="200" stroke="currentColor" stroke-width="0.3" opacity="0.4"/>
+          <line x1="100" y1="0" x2="100" y2="200" stroke="currentColor" stroke-width="0.3" opacity="0.4"/>
+          <line x1="150" y1="0" x2="150" y2="200" stroke="currentColor" stroke-width="0.3" opacity="0.4"/>
+          <!-- Location dots -->
+          <circle cx="68"  cy="82"  r="2.5" fill="currentColor" opacity="0.6"/>
+          <circle cx="130" cy="70"  r="2.5" fill="currentColor" opacity="0.6"/>
+          <circle cx="100" cy="114" r="2.5" fill="currentColor" opacity="0.8"/>
+          <!-- Connecting path -->
+          <path d="M68 82 Q90 60 130 70" fill="none" stroke="currentColor" stroke-width="0.8" stroke-dasharray="3 2" opacity="0.5"/>
+          <path d="M130 70 Q120 90 100 114" fill="none" stroke="currentColor" stroke-width="0.8" stroke-dasharray="3 2" opacity="0.5"/>
+        </svg>
+
+        <div class="domain-tag">ABM &amp; Migration</div>
+        <h3>Climate-Driven Human Displacement</h3>
+        <p>Agent-Based Models simulating population displacement during flooding and climate disasters. Working with UNHCR to forecast refugee return patterns and inform humanitarian policy with transparent, rule-based algorithms over black-box ML.</p>
+
+        <div class="domain-skills">
+          <span class="skill-tag">Agent-Based Modeling</span>
+          <span class="skill-tag">DFlee</span>
+          <span class="skill-tag">UNHCR</span>
+          <span class="skill-tag">Bangladesh</span>
+          <span class="skill-tag">Ukraine</span>
+        </div>
+
+        <div class="domain-cta">
+          <a href="{{ '/research/' | relative_url }}" class="btn btn-green">Explore research →</a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- =====================================================================
+     RESEARCH HIGHLIGHTS — three feature cards
+     ===================================================================== -->
+<section class="section research-section" id="research" aria-label="Featured research">
+  <div class="container">
+
+    <div class="section-header reveal">
+      <span class="section-label">featured projects</span>
+      <h2>Recent <span>Research</span></h2>
+    </div>
+
+    <div class="research-grid">
+
+      <article class="card astro reveal">
+        <span class="card-tag">Astrophysics · 2022</span>
+        <h3>Space Weather &amp; AU Mic b</h3>
+        <p>Modelled how Extreme Coronal Mass Ejections from AU Microscopii alter Lyman-alpha absorption patterns during planetary transits, revealing the dominant role of stellar winds in atmospheric escape.</p>
+        <div class="card-footer">
+          <span class="card-collab">with <span>Cohen, Drake, Garraffo +</span></span>
+          <a href="{{ '/research/' | relative_url }}" class="card-link">Details →</a>
+        </div>
+      </article>
+
+      <article class="card abm reveal">
+        <span class="card-tag">ABM · 2025</span>
+        <h3>DFlee: Flood Displacement Model</h3>
+        <p>Lead developer of DFlee — integrating USGS hydrological contexts with agent behavioural algorithms to simulate realistic evacuation timing, return decisions, and shelter-seeking across 160,000+ agents.</p>
+        <div class="card-footer">
+          <span class="card-collab">with <span>Groen, Suleimenova +</span></span>
+          <a href="{{ '/research/' | relative_url }}" class="card-link">Details →</a>
+        </div>
+      </article>
+
+      <article class="card abm reveal">
+        <span class="card-tag">ABM · 2024</span>
+        <h3>Ukrainian Refugee Return Forecasting</h3>
+        <p>Predictive ABM prototype forecasting potential return pathways of Ukrainian refugees, presented ahead of the 2024 Ukraine Recovery Conference in partnership with UNHCR.</p>
+        <div class="card-footer">
+          <span class="card-collab">with <span>UNHCR, Groen +</span></span>
+          <a href="{{ '/research/' | relative_url }}" class="card-link">Details →</a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- =====================================================================
+     PUBLICATIONS — recent list
+     ===================================================================== -->
+<section class="section publications-section" id="publications" aria-label="Selected publications">
+  <div class="container">
+
+    <div class="section-header reveal">
+      <span class="section-label">selected work</span>
+      <h2>Publications</h2>
+    </div>
+
+    <ul class="pub-list" role="list">
+
+      <li class="pub-item reveal">
+        <span class="pub-year">2025</span>
+        <div class="pub-content">
+          <h4>DFlee: An Agent-Based Model for Flood-Induced Population Displacement</h4>
+          <p class="pub-meta">Harbach, L.M., Groen, D., et al. — Preprint, Research Square</p>
+          <div class="pub-tags">
+            <span class="pub-tag abm">ABM</span>
+            <span class="pub-tag abm">Migration</span>
+          </div>
+        </div>
+      </li>
+
+      <li class="pub-item reveal">
+        <span class="pub-year">2024</span>
+        <div class="pub-content">
+          <h4>A Conceptual Approach to Agent-Based Modelling of Coping Mechanisms in Climate-Driven Flooding in Bangladesh</h4>
+          <p class="pub-meta">Harbach, L.M., Groen, D., Jahani, A., et al. — ICCS 2024</p>
+          <div class="pub-tags">
+            <span class="pub-tag abm">ABM</span>
+            <span class="pub-tag abm">Climate</span>
+          </div>
+        </div>
+      </li>
+
+      <li class="pub-item reveal">
+        <span class="pub-year">2022</span>
+        <div class="pub-content">
+          <h4>Space Weather-driven Variations in Ly&alpha; Absorption Signatures of Exoplanet Atmospheric Escape: MHD Simulations and AU Mic b</h4>
+          <p class="pub-meta">Harbach, L.M., et al. — The Astrophysical Journal, 934(2), 189</p>
+          <div class="pub-tags">
+            <span class="pub-tag astro">Astrophysics</span>
+            <span class="pub-tag astro">MHD</span>
+          </div>
+        </div>
+      </li>
+
+      <li class="pub-item reveal">
+        <span class="pub-year">2021</span>
+        <div class="pub-content">
+          <h4>Stellar Winds Drive Strong Variations in Exoplanet Evaporative Outflow Patterns and Transit Absorption Signatures</h4>
+          <p class="pub-meta">Harbach, L.M., Moschou, S., Garraffo, C., Fraschetti, F., et al. — The Astrophysical Journal</p>
+          <div class="pub-tags">
+            <span class="pub-tag astro">Astrophysics</span>
+            <span class="pub-tag astro">Stellar Winds</span>
+          </div>
+        </div>
+      </li>
+
+    </ul>
+
+    <div class="pubs-cta reveal">
+      <a href="{{ '/publications/' | relative_url }}" class="btn btn-ghost">View all publications →</a>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- =====================================================================
+     CONNECT
+     ===================================================================== -->
+<section class="section connect-section" id="connect" aria-label="Contact">
+  <div class="container">
+    <div class="connect-inner reveal">
+      <span class="section-label">get in touch</span>
+      <h2>Let's Connect</h2>
+      <p>Interested in collaboration, speaking invitations, or curious about MHD simulations and refugee return modeling? I'd love to hear from you.</p>
+      <div class="connect-links">
+        <a href="mailto:l.harbach@brunel.ac.uk" class="btn btn-primary">Email me →</a>
+        <a href="https://github.com/lauraharbach" class="btn btn-ghost" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://orcid.org/0000-0001-7944-0292" class="btn btn-ghost" target="_blank" rel="noopener noreferrer">ORCID</a>
+        <a href="{{ '/contact/' | relative_url }}" class="btn btn-ghost">All links</a>
+      </div>
+    </div>
+  </div>
+</section>

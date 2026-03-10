@@ -1,13 +1,83 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your entire site, values
-# which you are expected to set up once and rarely need to edit after that.
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# `jekyll serve`. If you change this file, please restart the server process.
+# =============================================================================
+# Site Configuration — lauraharbach.github.io
+# =============================================================================
 
-# Site Settings
-locale                   : "en-UK"
-title                    : "Laura Harbach"
+# --- Site identity ---
+title:       "Laura Harbach"
+name:        "Laura Harbach"
+description: "Computational Researcher — Astrophysics & Agent-Based Modeling"
+url:         "https://lauraharbach.github.io"
+baseurl:     ""
+repository:  "lauraharbach/lauraharbach.github.io"
+
+# --- Author ---
+author:
+  name:        "Laura Harbach"
+  email:       "l.harbach@brunel.ac.uk"
+  github:      "lauraharbach"
+  twitter:     "LauraHarbach"
+  orcid:       "0000-0001-7944-0292"
+
+# --- File processing ---
+include:
+  - _pages
+encoding: "utf-8"
+markdown_ext: "markdown,mkdown,mkdn,mkd,md"
+future: true
+
+exclude:
+  - CHANGELOG.md
+  - CONTRIBUTING.md
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor/
+  - talkmap.ipynb
+  - talkmap.py
+  - "*.sublime-project"
+  - "*.sublime-workspace"
+  - node_modules/
+  - package.json
+  - assets/js/_main.js
+  - assets/js/plugins
+  - assets/js/vendor
+
+# --- Build ---
+markdown:    kramdown
+highlighter: rouge
+permalink:   /:title/
+
+kramdown:
+  input:      GFM
+  hard_wrap:  false
+  auto_ids:   true
+
+# --- Sass ---
+sass:
+  sass_dir: _sass
+  style:    compressed
+
+# --- Defaults ---
+defaults:
+  - scope:
+      path: "_pages"
+    values:
+      layout: "page"
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: "page"
+
+# --- Plugins ---
+plugins:
+  - jekyll-sitemap
+  - jekyll-feed
+
+whitelist:
+  - jekyll-sitemap
+  - jekyll-feed
+
 title_separator          : "-"
 name                     : &name "Laura Harbach"
 description              : &description "Astrophysics PhD Student"

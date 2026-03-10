@@ -1,0 +1,95 @@
+// =============================================================================
+// Responsive Breakpoints
+// =============================================================================
+
+$bp-sm:  480px;
+$bp-md:  768px;
+$bp-lg:  1024px;
+
+// --- Large → stacks hero columns ---
+@media (max-width: $bp-lg) {
+  .hero-inner {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+    padding-bottom: 6rem;
+  }
+
+  .hero-code {
+    order: 2;
+    width: 100%;
+    .code-window { max-width: 100%; }
+  }
+
+  .hero-visual {
+    order: 1;
+    .planet-system { width: 200px; height: 200px; }
+    .planet { width: 100px; height: 100px; }
+    .orbit-1 { width: 150px; height: 150px; }
+    .orbit-2 { width: 188px; height: 188px; }
+    .orbit-dot { transform: translate(-50%, -50%) rotateX(-72deg) translateX(75px); }
+  }
+
+  .about-layout { grid-template-columns: 1fr; }
+  .about-sidebar { position: static; }
+}
+
+// --- Medium → collapse nav, single columns ---
+@media (max-width: $bp-md) {
+  .site-nav .nav-toggle { display: flex; }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+    background: rgba($bg-base, 0.97);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-bottom: 1px solid $border-default;
+    flex-direction: column;
+    padding: 0.75rem;
+    gap: 0.1rem;
+    &.open { display: flex; }
+  }
+
+  .nav-link a { padding: 0.7rem 1rem; border-radius: $radius-sm; }
+
+  .domains-grid { grid-template-columns: 1fr; }
+
+  .research-grid { grid-template-columns: 1fr; }
+
+  .pub-item {
+    grid-template-columns: 1fr;
+    .pub-year { font-size: 0.7rem; }
+  }
+
+  .site-footer .footer-inner {
+    grid-template-columns: 1fr 1fr;
+    .footer-brand { grid-column: 1 / -1; }
+  }
+
+  .section { padding: 3.5rem 0; }
+}
+
+// --- Small → tight typography/padding ---
+@media (max-width: $bp-sm) {
+  .hero-code .code-body {
+    font-size: 0.78rem;
+    padding: 1.1rem 1.25rem 1.4rem;
+    line-height: 1.75;
+  }
+
+  .domain-card { padding: 1.75rem; }
+
+  .section { padding: 3rem 0; }
+
+  .page-wrapper { padding-top: calc(#{$nav-height} + 2rem); }
+
+  .site-footer .footer-inner { grid-template-columns: 1fr; gap: 1.5rem; }
+
+  .connect-links { flex-direction: column; align-items: center; }
+
+  .card { padding: 1.25rem; }
+}

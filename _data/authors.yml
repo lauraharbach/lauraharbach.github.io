@@ -1,18 +1,12 @@
 # Authors
 
 Name Name:
-  name        : "Laura Harbach"
+  name        : "Laura Marshall Harbach"
   uri         : "http://lauraharbach@github.io"
-  email       : "l.harbach19@imperial.ac.uk"
-  bio         : "This is the first name."
+  email       : "laura.harbach@brunel.ac.uk"
+  bio         : "Researcher/Scientist specialising in computational research, with a focus on astrophysics and agent-based modeling. Passionate about open science, reproducibility, and the development of computational tools to advance scientific discovery."
   avatar      : "bio-photo-2.jpg"
   twitter     : "Laura Harbach"
   google_plus : "Laura Harbach"
 
-Name2 Name2:
-  name        : "Name2 Name2"
-  email       : "name2@name2.com"
-  bio         : "I ordered what?"
-  avatar      : "bio-photo.jpg"
-  twitter     : "name2"
-  google_plus : "Name"
+
