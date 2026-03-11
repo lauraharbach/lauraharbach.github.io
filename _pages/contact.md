@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Contact
-eyebrow: "ssh l.harbach@brunel.ac.uk"
+eyebrow: "ssh laura.harbach@brunel.ac.uk"
 permalink: /contact/
 ---
 
@@ -23,7 +23,7 @@ permalink: /contact/
     <span class="t-gap"></span>
 
     <span class="t-cmd">cat email.txt</span>
-    <span class="t-out"><a class="t-link" href="mailto:l.harbach@brunel.ac.uk">l.harbach@brunel.ac.uk</a></span>
+    <span class="t-out"><a class="t-link" href="mailto:laura.harbach@brunel.ac.uk">laura.harbach@brunel.ac.uk</a></span>
     <span class="t-gap"></span>
 
     <span class="t-cmd">open --github</span>

@@ -85,8 +85,8 @@ permalink: /about/
 
   <div class="sidebar-block">
     <h4 class="sidebar-heading">connect</h4>
-    <a class="link-row" href="mailto:l.harbach@brunel.ac.uk">
-      <span class="link-icon">✉</span> l.harbach@brunel.ac.uk
+    <a class="link-row" href="mailto:laura.harbach@brunel.ac.uk">
+      <span class="link-icon">✉</span> laura.harbach@brunel.ac.uk
     </a>
     <a class="link-row" href="https://github.com/lauraharbach" target="_blank" rel="noopener noreferrer">
       <span class="link-icon">⌥</span> github.com/lauraharbach

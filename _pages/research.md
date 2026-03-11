@@ -26,14 +26,14 @@ permalink: /research/
 
     <div class="project-entry">
       <h3>Space Weather &amp; AU Mic b — Lyman-alpha Signatures</h3>
-      <p>Modelled the impact of Extreme Coronal Mass Ejections from AU Microscopii on the escaping atmosphere of AU Mic b. Produced synthetic Lyman-alpha absorption transit spectra showing how space weather dramatically alters observable signatures, providing direct tools to constrain atmospheric escape from telescope data.</p>
-      <p class="project-meta">Astrophysical Journal, 2022 · with Cohen, Drake, Garraffo, Alvarado-Gómez, Fraschetti</p>
+      <p>Modelled space-weather-driven variability in Ly-alpha absorption signatures from the escaping atmosphere of AU Mic b. Produced synthetic transit spectra showing how stellar-wind conditions alter observable signatures, providing direct tools to constrain atmospheric escape from observational data.</p>
+      <p class="project-meta">Astrophysical Journal, 2022 · with Cohen, Alvarado-Gomez, Drake, Garraffo, Fraschetti</p>
     </div>
 
     <div class="project-entry">
       <h3>Stellar Winds Drive Evaporative Outflow Variations</h3>
       <p>Demonstrated through 3D MHD simulations that magnetized stellar winds create strong, time-variable distortions to exoplanet atmospheric outflows. Showed how the morphology of the planetary magnetosphere directly modulates transit absorption signatures, challenging models that treat evaporation as purely radiatively-driven.</p>
-      <p class="project-meta">Astrophysical Journal, 2021 · with Moschou, Garraffo, Fraschetti, Cohen, Drake</p>
+      <p class="project-meta">Astrophysical Journal, 2021 · with Moschou, Garraffo, Drake, Alvarado-Gomez, Cohen, Fraschetti</p>
     </div>
 
     <div class="project-entry">
@@ -78,7 +78,7 @@ permalink: /research/
     </div>
 
     <div class="project-entry">
-      <h3>Ukrainian Refugee Return Forecasting</h3>
+      <h3>Forecasting refugee return to Ukraine amid ongoing war and uncertainty</h3>
       <p>Developed a predictive ABM prototype for the UNHCR forecasting potential return pathways of Ukrainian refugees. The model maps push factors (conflict, infrastructure damage) and pull factors (safety, economic opportunity, family ties) to simulate return trajectories under multiple recovery scenarios. Presented ahead of the 2024 Ukraine Recovery Conference.</p>
       <p class="project-meta">2024 · UNHCR Collaboration · with Groen, Suleimenova</p>
     </div>

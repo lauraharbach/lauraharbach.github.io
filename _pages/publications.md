@@ -9,6 +9,21 @@ permalink: /publications/
 <div class="pubs-page">
 
 <div class="pub-year-group">
+  <h2>// 2026</h2>
+  <ul class="full-pub-list">
+    <li class="full-pub-item">
+      <h3>On qualitative uncertainty in modelling assumptions</h3>
+      <p class="pub-authors">Groen, D., Harbach, L.M.</p>
+      <p class="pub-venue">Journal of Computational Science, 94 (2026)</p>
+      <div class="pub-actions">
+        <span class="pub-tag abm" style="font-size:0.65rem;padding:0.12rem 0.44rem;border-radius:99px;background:rgba(86,211,100,0.1);color:#56D364;">ABM</span>
+        <span class="pub-tag abm" style="font-size:0.65rem;padding:0.12rem 0.44rem;border-radius:99px;background:rgba(86,211,100,0.1);color:#56D364;">Uncertainty</span>
+      </div>
+    </li>
+  </ul>
+</div>
+
+<div class="pub-year-group">
   <h2>// 2025</h2>
   <ul class="full-pub-list">
     <li class="full-pub-item">
@@ -59,7 +74,7 @@ permalink: /publications/
   <h2>// 2022</h2>
   <ul class="full-pub-list">
     <li class="full-pub-item">
-      <h3>Space Weather-driven Variations in Ly&alpha; Absorption Signatures of Exoplanet Atmospheric Escape: MHD Simulations and the Case of AU Mic b</h3>
+      <h3>Space-weather-driven Variations in Ly&alpha; Absorption Signatures of Exoplanet Atmospheric Escape: MHD Simulations and the Case of AU Mic b</h3>
       <p class="pub-authors">Harbach, L.M., Cohen, O., Moschou, S.P., Garraffo, C., Fraschetti, F., Drake, J.J., Alvarado-Gómez, J.D.</p>
       <p class="pub-venue">The Astrophysical Journal, 934(2), 189 (2022)</p>
       <div class="pub-actions">
