@@ -8,7 +8,7 @@ This page highlights some of my key research projects, demonstrating the applica
 
 ### Modelling Returnee Movements to Ukraine (UNHCR Funded Project)
 
-**Description:** Currently modelling the potential return movements of displaced populations to Ukraine using an Agent-Based Model (ABM). The model builds upon frameworks such as the Flee ABM code.
+**Description:** Currently modelling the potential return movements of displaced populations to Ukraine using an Agent-Based Model (ABM). 
 
 **Focus:** Conducting sensitivity analysis to understand which factors most significantly influence simulation outcomes and assessing the robustness of projections.
 
@@ -18,7 +18,7 @@ This page highlights some of my key research projects, demonstrating the applica
 
 ### Computational Modelling for Humanitarian Challenges (PhD Placement with Save the Children)
 
-**Description:** Placement with Save the Children and Brunel University London, applying computational modelling techniques to humanitarian challenges.
+**Description:** Placement with Save the Children and Brunel University London, applying computational modelling techniques to humanitarian challenges. Here, we looked at flooding in Bangladesh. 
 
 **Focus:** Translating research methodologies to practical, non-academic contexts and collaborating with a major international NGO.
 
