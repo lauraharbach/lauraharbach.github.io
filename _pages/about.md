@@ -37,9 +37,9 @@ permalink: /about/
 
 <ul>
   <li><strong>Simulation:</strong> 3D MHD (BATS-R-US), 1D multifluid hydrodynamics, Agent-Based Modeling (Flee/DFlee)</li>
-  <li><strong>Computing:</strong> High-Performance Computing (HPC), Python, C++, parallel processing, VVUQ</li>
-  <li><strong>Data:</strong> USGS hydrological datasets, UNHCR demographic data, synthetic transit spectra</li>
-  <li><strong>Analysis:</strong> Uncertainty quantification, push/pull factor modeling, synthetic observable generation</li>
+  <li><strong>Computing:</strong> High-Performance Computing (HPC), Python, C, Verification, Validation & Uncertainty Quantification (VVUQ) , Uncertainty Qualification</li>
+  <li><strong>Data:</strong> Demographic data, Geographical datasets </li>
+  <li><strong>Analysis:</strong> Uncertainty quantification, push/pull factor modeling, migration flows</li>
 </ul>
 
 </div>
