@@ -28,12 +28,13 @@ permalink: /publications/
   <ul class="full-pub-list">
     <li class="full-pub-item">
       <h3>DFlee: An Agent-Based Model for Flood-Induced Population Displacement</h3>
-      <p class="pub-authors">Jahani, A., Puma M., Harbach, L.M., Groen, D., Suleimenova, D., , Ghorbani, M., Xue, Y.</p>
+      <p class="pub-authors">Jahani, A., Puma, M., Harbach, L.M., Groen, D., Suleimenova, D., Ghorbani, M., Xue, Y.</p>
       <p class="pub-venue">Preprint — Research Square (2025)</p>
       <div class="pub-actions">
         <span class="pub-tag abm" style="font-size:0.65rem;padding:0.12rem 0.44rem;border-radius:99px;background:rgba(86,211,100,0.1);color:#56D364;">ABM</span>
         <span class="pub-tag abm" style="font-size:0.65rem;padding:0.12rem 0.44rem;border-radius:99px;background:rgba(86,211,100,0.1);color:#56D364;">Migration</span>
       </div>
+    </li>
   </ul>
 </div>
 
@@ -66,7 +67,7 @@ permalink: /publications/
   <ul class="full-pub-list">
     <li class="full-pub-item">
       <h3>Space-weather-driven Variations in Ly&alpha; Absorption Signatures of Exoplanet Atmospheric Escape: MHD Simulations and the Case of AU Mic b</h3>
-      <p class="pub-authors"> Cohen, O., Drake, J.J., Alvarado-Gómez, J.D.,Harbach, L.M. Garraffo, C., Fraschetti, F. </p>
+      <p class="pub-authors">Cohen, O., Drake, J.J., Alvarado-Gómez, J.D., Harbach, L.M., Garraffo, C., Fraschetti, F.</p>
       <p class="pub-venue">The Astrophysical Journal, 934(2), 189 (2022)</p>
       <div class="pub-actions">
         <span class="pub-tag astro" style="font-size:0.65rem;padding:0.12rem 0.44rem;border-radius:99px;background:rgba(121,184,255,0.1);color:#79B8FF;">Astrophysics</span>
